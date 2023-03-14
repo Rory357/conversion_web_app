@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>Bootstrap demo</title>
+    <title>Conversion Web App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" src="{{url('css/css.css')}}">
@@ -13,29 +13,20 @@
 </head>
   <body>
   <header>
-      <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-8 col-md-7 py-4">
-              <h4 class="text-white">About</h4>
-              <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
-            </div>
-            <div class="col-sm-4 offset-md-1 py-4">
-              <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-white">Follow on Twitter</a></li>
-                <li><a href="#" class="text-white">Like on Facebook</a></li>
-                <li><a href="#" class="text-white">Email me</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <i class="bi bi-box"></i>
-            <strong> Converter Web App</strong>
+        <div class="container">
+          <a href="https://www.linkedin.com/in/c-prinsloo123" class="navbar-brand w-100">
+            <div class="row">
+              <div class="col-md-6">  
+                <i class="bi bi-box"></i>
+                  <strong> Converter Web App</strong>
+              </div>
+            
+              <div class="col-md-6" style="text-align: right">
+                <i class="bi bi-c-square"></i>  
+                <strong>Chane Prinsloo</strong>
+              </div>
+            </div>
           </a>
         </div>
       </div>
@@ -49,7 +40,7 @@
           <p class="lead text-muted">Select from the dropdowns from which unit to another unit to convert accordingly</p>
           <p>
           <div class="row">
-            <div class="col-lg-5">
+            <div class="col-md-5">
                 <div class="input-group">
                     <input type="text" class="form-control" id="fromConvertValue" onChange="getValueConversion()" value="" placeholder="Value From which to convert" aria-label="Text input with dropdown button">
                     <div class="input-group-btn">
@@ -64,13 +55,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
-            <button type="button" class="btn btn-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"></path>
-                </svg></button>
+            <div class="col-md-2">
+            <span class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8Zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5Z"></path>
+              </svg>
+            </span>
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5">
                 <div class="input-group">
                     <input readonly type="text" class="form-control" id="toConvertValue" value="" placeholder="Value converted" aria-label="Text input with dropdown button">
                     <div class="input-group-btn">
