@@ -17,7 +17,9 @@ function getValueConversion(){
             type: "POST",
             data: { fromVal : fromVal,fromUnit : fromUnit,toUnit:toUnit},
         }).done(function( msg ) {
+
             $('#toConvertValue').val(msg);
+            
         });
     }
 }
