@@ -15,7 +15,7 @@
   <header>
       <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container">
-          <a href="https://www.linkedin.com/in/c-prinsloo123" class="navbar-brand w-100">
+          <a href="https://www.linkedin.com/in/c-prinsloo123" target="_blank" class="navbar-brand w-100">
             <div class="row">
               <div class="col-md-6">  
                 <i class="bi bi-box"></i>
