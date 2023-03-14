@@ -20,4 +20,4 @@ use App\Http\Controllers\Conversion;
 
 Route::get('/view_conversion', [Conversion::class,'index']);
 
-Route::post('/conversionData', 'App\Http\Controllers\Conversion@convertMetricToImperial');
+Route::post('/conversionData', 'App\Http\Controllers\Conversion@convertMetricAndImperial');

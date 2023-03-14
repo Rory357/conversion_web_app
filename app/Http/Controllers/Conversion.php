@@ -14,12 +14,18 @@ class Conversion extends Controller
         return view('conversion_view',['users'=>$users]);
     }
 
-    public function convertMetricToImperial() {
+    /**
+     * Initiates conversion
+     * @return int if array contains conversion.
+     * @return string if conversion not found
+     */
+    public function convertMetricAndImperial() {
 
         $fromValue = $_POST['fromVal'];
         $fromUnit = $_POST['fromUnit'];
         $toUnit = $_POST['toUnit'];
 
+        // Array for conversions
         $arr = array(
             "cm to cm"=>"",
             "cm to in"=>"* 0.39",
@@ -74,9 +80,6 @@ class Conversion extends Controller
             if(in_array($toString,$keys)){
 
                 if($key == $toString){
-
-
-                    // $intString = int($val);
     
                     if($key == "C to F"){
     
@@ -91,14 +94,13 @@ class Conversion extends Controller
 
                     if($val != ""){
                         $value = $fromValue.$val;
-                        eval('$value = (' . $value. ');');
+                        eval('$value = (' . $value. ');'); //Works out value
                     }
                     else{
                         $value = $fromValue;
                     }
     
                     echo $value;
-                    // $value = $fromValue.$val;
                 }
 
             }
@@ -109,7 +111,7 @@ class Conversion extends Controller
         }
 
         if(!$inArr){
-            echo "Invalid conversion";
+            echo "Invalid conversion";// if conversion not found
         }
     }
 
